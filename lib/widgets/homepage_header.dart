@@ -21,7 +21,7 @@ class HomepageHeader implements SliverPersistentHeaderDelegate {
       decoration: const BoxDecoration(color: Colors.white),
       child: Stack(
         children: [
-          if (shrinkOffset < 140)
+          if (shrinkOffset < 100)
             Column(
               children: [
                 Stack(
@@ -31,13 +31,11 @@ class HomepageHeader implements SliverPersistentHeaderDelegate {
                       color: AppColors.greyBg,
                       padding:
                           EdgeInsets.symmetric(horizontal: context.width(.06)),
-                      height: context.height(.4),
+                      height: context.height(.42),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          SizedBox(
-                              height: MediaQuery.of(context).padding.top +
-                                  context.height(.1)),
+                          SizedBox(height: context.height(.17)),
                           Text(
                             "#FASHION DAY",
                             style: TextStyle(
@@ -79,7 +77,7 @@ class HomepageHeader implements SliverPersistentHeaderDelegate {
                         child: const ScrollPillWidget()),
                     Positioned(
                       right: -context.width(.2),
-                      bottom: -context.height(.2),
+                      bottom: -context.height(.19),
                       child: Image.asset(
                         ImageUtil.homeShirt,
                         height: context.height(.4),
@@ -90,7 +88,7 @@ class HomepageHeader implements SliverPersistentHeaderDelegate {
                 SizedBox(
                   height: context.height(.025),
                 ),
-                if (shrinkOffset < 20)
+                if (shrinkOffset < 10)
                   Column(
                     children: [
                       Padding(

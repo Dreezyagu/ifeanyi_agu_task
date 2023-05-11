@@ -29,7 +29,7 @@ class ProductCard extends StatelessWidget {
               width: double.infinity,
               decoration: const BoxDecoration(color: Color(0xffEEEEEF)),
               child: Image.asset(
-                "assets/images/shirt${(index % 5) == 0 ? 5 : index % 5}.png",
+                "assets/images/shirt${(index % 4) == 0 ? 4 : index % 4}.png",
                 fit: BoxFit.cover,
               ),
             ),

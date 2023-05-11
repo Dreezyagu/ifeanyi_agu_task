@@ -27,7 +27,7 @@ class _HomepageState extends State<Homepage> {
             floating: true,
             pinned: true,
             delegate: HomepageHeader(
-                minExtent: context.height(.16), maxExtent: context.height(.57)),
+                minExtent: context.height(.16), maxExtent: context.height(.58)),
           ),
           SliverPersistentHeader(
               floating: true,
@@ -83,7 +83,7 @@ class _HomepageState extends State<Homepage> {
                   padding: const EdgeInsets.symmetric(vertical: 4.0),
                   child: Image.asset(
                     "assets/icons/${e.toLowerCase()}.png",
-                    width: context.width(.07),
+                    width: context.width(.055),
                   ),
                 )))
             .toList(),
