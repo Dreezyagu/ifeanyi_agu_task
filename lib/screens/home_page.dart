@@ -57,9 +57,21 @@ class _HomepageState extends State<Homepage> {
                     onTap: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProductDetails(),
-                          ));
+                          PageRouteBuilder(
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) =>
+                                      const ProductDetails(),
+                              transitionDuration:
+                                  const Duration(milliseconds: 500),
+                              transitionsBuilder: (context, animation,
+                                      secondaryAnimation, child) =>
+                                  SlideTransition(
+                                    position: Tween<Offset>(
+                                      begin: const Offset(0, 1),
+                                      end: Offset.zero,
+                                    ).animate(animation),
+                                    child: child,
+                                  )));
                     },
                     child: ProductCard(
                         randomRating: randomRating,

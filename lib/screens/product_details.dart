@@ -86,16 +86,20 @@ class _ProductDetailsState extends State<ProductDetails>
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset(
-                    ImageUtil.star,
-                    color: AppColors.starRatingColor,
-                    width: context.width(.05),
-                  ),
-                  Text(
-                    "4.9 Ratings",
-                    style: TextStyle(
-                        fontSize: context.width(.04),
-                        color: AppColors.textGrey),
+                  Row(
+                    children: [
+                      Image.asset(
+                        ImageUtil.star,
+                        color: AppColors.starRatingColor,
+                        width: context.width(.05),
+                      ),
+                      Text(
+                        "   4.9 Ratings",
+                        style: TextStyle(
+                            fontSize: context.width(.04),
+                            color: AppColors.textGrey),
+                      ),
+                    ],
                   ),
                   const BulletWidget(),
                   Text(
